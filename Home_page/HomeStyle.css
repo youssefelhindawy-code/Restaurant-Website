@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+#RestaurantHeader {
+  display: flex;
+  flex-direction: row;
+  background-color: #272727;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  gap: 20px;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+main {
+  display: flex;
+  flex-direction: row;
+
+  flex: auto;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgxTtgo3B0dXIJ1pljQpZFTaWShH3-eO7JR266Ts0yVR65ZYRYWqU0ZkKp&s=1024");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#welcomeSection {
+  display: flex;
+  flex-direction: column;
+  flex: auto;
+  align-items: start;
+  justify-content: center;
+  height: 100%;
+  text-align: start;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 48px;
+}
+#actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#orderButton {
+  padding: 10px 20px;
+  border-radius: 5px;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #8a95a5;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: cursive;
+  transition: all 0.3s ease;
+  &:hover {
+    font-size: 20px;
+    transform: scale(1.05);
+    background-color: white;
+    color: black;
+    font-weight: bold;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  background-color: #161925;
+  padding: 20px;
+  text-align: center;
+  gap: 20px;
+}
