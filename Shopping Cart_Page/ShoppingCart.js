@@ -171,11 +171,10 @@ const CartItems = [
 document.addEventListener("DOMContentLoaded", () => {
   render();
 });
+const cartItemsList = document.getElementById("cart-items-list");
+const totalItemsElement = document.getElementById("total-items");
+const totalPriceElement = document.getElementById("total-price");
 function render() {
-  const cartItemsList = document.getElementById("cart-items-list");
-  const totalItemsElement = document.getElementById("total-items");
-  const totalPriceElement = document.getElementById("total-price");
-
   // Clear the current list
   cartItemsList.innerHTML = "";
 
@@ -218,8 +217,9 @@ function render() {
         <p>Total Price: $${itemTotalPrice.toFixed(2)}</p>
       </div>
       <div class="cart-item-actions">
-        <button class="remove-item-button" data-id="${item.id}">🗑️</button>
-
+        
+        <button class="remove-item-button" data-id="${item.id}">X</button>
+        
         <div class="quantity-controls">
         <button class="plus-item-button" data-id="${item.id}">+</button>
         <input type="number" class="quantity-input" data-id="${item.id}" value="${item.quantity}" min="1" />
