@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu Restaurant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styel.css">
+   <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="temp-nav">
+    <a href="index.html" class="temp-nav__logo">Restaurant</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="cart.html">Cart <span id="cartCount" class="badge">0</span></a>
+    </nav>
+  </header>
+
+  <main class="menu">
+    <section class="menu__head">
+      <h1>Our menu</h1>
+      <p>Fresh from the oven and the grill. Pick what you like and add it to your cart.</p>
+    </section>
+
+    <section class="tools" aria-label="Search and filter">
+      <label class="search">
+        <span class="visually-hidden">Search the menu</span>
+        <input type="search" id="searchInput" placeholder="Search for a dish or a drink" autocomplete="off">
+      </label>
+
+      <div class="filters" id="filters" role="group" aria-label="Filter by category">
+        <button class="chip is-active" data-category="all">All</button>
+        <button class="chip" data-category="pizza">Pizza</button>
+        <button class="chip" data-category="burger">Burger</button>
+        <button class="chip" data-category="drinks">Drinks</button>
+      </div>
+    </section>
+
+    <p class="result-count" id="resultCount" aria-live="polite"></p>
+
+    <div id="menuGrid" class="grid"></div>
+
+    <div id="emptyState" class="empty" hidden>
+      <h2>Nothing matches your search</h2>
+      <p>Try a different word, or clear the search to see everything.</p>
+      <button class="btn" id="clearBtn">Clear search</button>
+    </div>
+  </main>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
